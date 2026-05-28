@@ -7319,6 +7319,7 @@ textarea {
 .happsta-safety-grid h3 {
   margin-top: 22px;
   font-size: 2.25rem;
+  white-space: nowrap;
 }
 
 .happsta-safety-grid p {
