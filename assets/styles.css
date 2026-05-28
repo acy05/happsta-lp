@@ -8405,6 +8405,14 @@ textarea {
     overflow-wrap: normal;
   }
 
+  .happsta-safety-grid article:nth-child(n) p {
+    width: 120px;
+  }
+
+  .happsta-desktop-break {
+    display: none;
+  }
+
   .happsta-achievements {
     height: 925px;
     padding-left: 16px;
