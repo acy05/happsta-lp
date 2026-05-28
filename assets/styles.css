@@ -7783,6 +7783,7 @@ textarea {
     margin: 0 0 24px;
   }
 
+  .happsta-worries .happsta-section-title,
   .happsta-flow .happsta-section-title,
   .happsta-safety .happsta-section-title {
     margin: 0 0 24px;
@@ -8035,7 +8036,7 @@ textarea {
   }
 
   .happsta-worries {
-    height: 1348px;
+    height: 1284px;
   }
 
   .happsta-voice-grid {
