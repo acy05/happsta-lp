@@ -8446,7 +8446,7 @@ textarea {
 
   .happsta-safety-grid article:nth-child(4) .happsta-crossed {
     left: 14px;
-    top: -15px;
+    top: 0;
     width: 116px;
     height: 87px;
   }
