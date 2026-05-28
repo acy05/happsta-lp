@@ -8446,7 +8446,7 @@ textarea {
 
   .happsta-safety-grid article:nth-child(4) .happsta-crossed {
     left: 14px;
-    top: 0;
+    top: -15px;
     width: 116px;
     height: 87px;
   }
@@ -8501,7 +8501,7 @@ textarea {
 
   .happsta-safety-grid article:nth-child(4) h3 {
     left: 0;
-    top: 118px;
+    top: 103px;
     width: 144px;
   }
 
@@ -8545,7 +8545,7 @@ textarea {
 
   .happsta-safety-grid article:nth-child(4) p {
     left: 12px;
-    top: 146px;
+    top: 131px;
     width: 120px;
   }
 
