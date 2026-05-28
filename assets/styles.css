@@ -7783,6 +7783,11 @@ textarea {
     margin: 0 0 24px;
   }
 
+  .happsta-flow .happsta-section-title,
+  .happsta-safety .happsta-section-title {
+    margin: 0 0 24px;
+  }
+
   .happsta-section-title h2,
   .happsta-achievements .happsta-section-title h2 {
     max-width: none;
