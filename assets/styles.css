@@ -7784,6 +7784,7 @@ textarea {
   }
 
   .happsta-worries .happsta-section-title,
+  .happsta-features .happsta-section-title,
   .happsta-flow .happsta-section-title,
   .happsta-safety .happsta-section-title {
     margin: 0 0 24px;
@@ -8126,15 +8127,31 @@ textarea {
 
   .happsta-feature,
   .happsta-feature.is-reverse {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 288px;
     height: auto;
     text-align: left;
   }
 
+  .happsta-feature div,
+  .happsta-feature.is-reverse div {
+    order: 1;
+  }
+
+  .happsta-feature img,
+  .happsta-feature.is-reverse img {
+    order: 2;
+  }
+
   .happsta-feature:nth-child(1) {
     width: 297px;
     height: 366px;
+  }
+
+  .happsta-feature:nth-child(1) div {
+    width: 288px;
+    margin-left: 4.5px;
   }
 
   .happsta-feature:nth-child(2) {
@@ -8171,6 +8188,7 @@ textarea {
 
   .happsta-feature:nth-child(2) img {
     height: 204px;
+    margin-top: 8px;
   }
 
   .happsta-feature:nth-child(3) div {
