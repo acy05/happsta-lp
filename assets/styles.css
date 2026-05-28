@@ -7240,10 +7240,6 @@ textarea {
   margin: 0;
 }
 
-.happsta-cta.is-final div img {
-  display: none;
-}
-
 .happsta-flow {
   height: 843px;
   background: #ffffff;
@@ -8239,10 +8235,6 @@ textarea {
     width: 288px;
     height: auto;
     margin: 0;
-  }
-
-  .happsta-cta.is-final div img {
-    display: block;
   }
 
   .happsta-flow {
