@@ -7343,6 +7343,10 @@ textarea {
   width: 264px;
 }
 
+.happsta-safety-grid article:nth-child(5) p {
+  width: 302px;
+}
+
 .happsta-safety-grid article:nth-child(6) p {
   width: 293px;
 }
