@@ -8294,8 +8294,9 @@ textarea {
     margin: 0;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.45;
+    line-height: normal;
     overflow-wrap: normal;
+    word-break: keep-all;
   }
 
   .happsta-step-grid article:nth-child(2) p {
