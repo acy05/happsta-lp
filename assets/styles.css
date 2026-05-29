@@ -7278,13 +7278,18 @@ textarea {
 }
 
 .happsta-step-grid p {
+  width: 317px;
   min-height: 130px;
   margin: 34px 0 24px;
   color: #111827;
   font-family: var(--happsta-font-display);
   font-size: 1.38rem;
-  font-weight: 500;
-  line-height: 1.45;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.happsta-flow-text-mobile {
+  display: none;
 }
 
 .happsta-step-grid img {
@@ -8321,6 +8326,14 @@ textarea {
     line-height: normal;
     overflow-wrap: normal;
     word-break: keep-all;
+  }
+
+  .happsta-flow-text-desktop {
+    display: none;
+  }
+
+  .happsta-flow-text-mobile {
+    display: block;
   }
 
   .happsta-step-grid article:nth-child(2) p {
