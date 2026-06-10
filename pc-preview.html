@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happsta | PCプレビュー</title>
+    <meta name="description" content="Notion埋め込み用のHappsta PC表示プレビュー。">
+    <style>
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        background: #ffffff;
+      }
+
+      body {
+        overflow: auto;
+      }
+
+      .pc-preview {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .pc-preview__scaled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1440px;
+        transform-origin: 0 0;
+      }
+
+      .pc-preview__frame {
+        display: block;
+        width: 1440px;
+        min-height: 900px;
+        border: 0;
+        background: #ffffff;
+      }
+
+      .pc-preview__spacer {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="pc-preview" id="preview">
+      <div class="pc-preview__scaled" id="scaled">
+        <iframe class="pc-preview__frame" id="frame" src="./index.html?view=pc-preview" title="Happsta PCプレビュー"></iframe>
+      </div>
+      <div class="pc-preview__spacer" id="spacer" aria-hidden="true"></div>
+    </main>
+    <script>
+      const DESKTOP_WIDTH = 1440;
+      const preview = document.getElementById("preview");
+      const scaled = document.getElementById("scaled");
+      const frame = document.getElementById("frame");
+      const spacer = document.getElementById("spacer");
+
+      function getFrameHeight() {
+        try {
+          const doc = frame.contentDocument;
+          return Math.max(
+            doc.documentElement.scrollHeight,
+            doc.body.scrollHeight,
+            900
+          );
+        } catch {
+          return 9000;
+        }
+      }
+
+      function resizePreview() {
+        const availableWidth = preview.clientWidth || window.innerWidth;
+        const scale = Math.min(availableWidth / DESKTOP_WIDTH, 1);
+        const frameHeight = getFrameHeight();
+
+        scaled.style.transform = `scale(${scale})`;
+        frame.style.height = `${frameHeight}px`;
+        spacer.style.height = `${Math.ceil(frameHeight * scale)}px`;
+      }
+
+      frame.addEventListener("load", () => {
+        resizePreview();
+        window.setTimeout(resizePreview, 800);
+        window.setTimeout(resizePreview, 1800);
+      });
+      window.addEventListener("resize", resizePreview);
+      resizePreview();
+    </script>
+  </body>
+</html>
