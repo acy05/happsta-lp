@@ -6778,8 +6778,21 @@ textarea {
 }
 
 .happsta-page {
+  width: 1440px;
+  max-width: none;
   overflow: hidden;
   background: #ffffff;
+  transform-origin: top left;
+}
+
+@media (min-width: 641px) {
+  .layout-happsta {
+    overflow-x: hidden;
+  }
+
+  .happsta-page {
+    zoom: calc(100vw / 1440px);
+  }
 }
 
 .happsta-inner {
@@ -7486,7 +7499,7 @@ textarea {
   color: var(--happsta-pink);
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 640px) {
   .happsta-section-title h2 {
     font-size: 3rem;
   }
@@ -7771,7 +7784,7 @@ textarea {
   }
 }
 
-@media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+@media (max-width: 640px) {
   .layout-happsta {
     background: #ffffff;
     overflow-x: hidden;
